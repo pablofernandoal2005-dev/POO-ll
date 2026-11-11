@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "MATERIALES PYTHON INTERMEDIO",
+			"uri": "vsls:/"
+		}
+	],
+	"settings": {
+		"extensions.ignoreRecommendations": true,
+		"editor.detectIndentation": true,
+		"editor.formatOnSave": false,
+		"files.autoSave": "off",
+		"files.trimTrailingWhitespace": false,
+		"files.insertFinalNewline": false,
+		"files.trimFinalNewlines": false,
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"debug.allowBreakpointsEverywhere": true,
+		"html.autoClosingTags": false
+	}
+}
