@@ -21,22 +21,28 @@ class controladorTanque:
 
                 elif opcion == "2":
                     self.vista.mostrar_tanques(self.modelo.tanques)
+
                 elif opcion == "3":
-                    codigo = self.convertir(self.vist.pedir_codigo)
-                    if tanque.despachar(cantidad):
-                        self.vista.mensaje("no existte se codigo")
+                    codigo = self.convertir(self.vista.pedir_codigo())
+                    tanque = self.modelo.buscar(codigo)
+                    if tanque is None:
+                        self.vista.mensaje("Error: no existe ese código.")
                     else:
                         cantidad = self.convertir(self.vista.pedir_cantidad())
                         if tanque.despachar(cantidad):
                             self.vista.mensaje(
-                                f"listo quedan {tanque.galones} de galones"
+                                f"Listo. Quedan {tanque.galones} galones."
                             )
                         else:
-                            self.vista.mensaje(f"solo hay {tanque.galones} de galones")
+                            self.vista.mensaje(
+                                f"Error: solo hay {tanque.galones} galones."
+                            )
 
                 elif opcion == "4":
                     self.vista.mensaje("hasta pronto")
+
                 else:
                     self.vista.mensaje("Opcion Invalida, vuelva a ingresar ")
+
             except ValueError:
                 self.vista.mensaje("Ingrese un numero valido")
