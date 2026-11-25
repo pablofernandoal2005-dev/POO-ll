@@ -30,8 +30,10 @@ Qué debe entregar
 Adjunte su archivo caso04_apellido.py y un PDF con las capturas de las pruebas (o todo en un .zip).
 
 """
-#resolucion del problema 
-#ejercicio de caso 4 
+
+# resolucion del problema
+# ejercicio de caso 4
+
 
 class Tanque:
     def __init__(self, codigo, combustible, precio, galones):
@@ -55,10 +57,7 @@ class Tanque:
         return f"{self.codigo:<8} {self.combustible:<14} {self.precio:<10.2f} {self.galones:<10}"
 
 
-tanques = [
-    Tanque(1, "Extra", 2.72, 500),
-    Tanque(2, "Diesel", 1.80, 300)
-]
+tanques = [Tanque(1, "Extra", 2.72, 500), Tanque(2, "Diesel", 1.80, 300)]
 
 while True:
     print("\n--- Gasolinera El Arenal ---")
